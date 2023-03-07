@@ -1,21 +1,19 @@
-//
-//  ContentView.swift
-//  Spend Together
-//
-//  Created by Jose Manuel Roldan Gomez on 7/3/23.
-//
-
-import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                NavigationLink(destination: MainView()) {
+                    Text("Enter the app")
+                        .fontWeight(.bold)
+                        .padding()
+                        .background(Color.white)
+                        .foregroundColor(.black)
+                        .cornerRadius(10)
+                }
+            }
+            .navigationBarHidden(true)
         }
-        .padding()
     }
 }
 

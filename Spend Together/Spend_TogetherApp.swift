@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+import SwiftUI
+
 @main
 struct Spend_TogetherApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoadingScreenView()
+                .onDisappear {
+                                    UIApplication.shared.windows.first?.rootViewController = UIHostingController(rootView: ContentView())
+                                }
         }
     }
 }
+
